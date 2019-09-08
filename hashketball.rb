@@ -160,7 +160,9 @@ def player_numbers(name)
   jersey_nums = []
   game_hash.each do |location, team_data|
     if team_data[:team_name] == name
-      return team_data[:colors]
+      team_data.each do |key, colors|
+        
+      end
     end
   end
   jersey_nums
