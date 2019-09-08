@@ -288,6 +288,7 @@ def long_name_steals_a_ton?
         data.each do |player|
           if player[:player_name].length > current && player[:steals] > current_steal
             current = player[:player_name].length
+            
             long_name = player[:player_name]
           end
         end
