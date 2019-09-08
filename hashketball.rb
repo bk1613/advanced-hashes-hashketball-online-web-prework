@@ -232,7 +232,7 @@ def winning_team
     team.each do |attribute, data|
       if attribute == :players 
         data.each do |player|
-          if player[:points] > max
+          if player[:points] == points
             max = player[:points]
             name = player[:player_name]
           end
