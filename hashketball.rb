@@ -143,13 +143,8 @@ end
 
 def team_colors
   game_hash.each do |location, team_data|
-    team_data.each do |team_name, colors|
-     if colors == name
-        binding.pry
-        
-        
-      end
-    end
+    if team_data[]
+    
   end
 end
 
