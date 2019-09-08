@@ -174,5 +174,5 @@ def player_stats(name)
   
 end
 
-team_colors
+
 
