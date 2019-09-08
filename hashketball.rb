@@ -191,7 +191,17 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
-  
+  current = nil 
+  rebounds = nil 
+  game_hash.each do |location, team|
+    team[:players].each do |player|
+     if current == nil || player[:shoe] > current
+       current = player[:shoe]
+          rebounds = player[:rebounds]
+       end
+    end
+  end
+  return rebounds
 end
 
 def most_points_scored
