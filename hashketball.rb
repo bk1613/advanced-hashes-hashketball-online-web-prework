@@ -251,7 +251,7 @@ def winning_team
   end
   
   if total_name_home > total_name_away
-    return 
+    return game_hash[:home][:]
 
 end
 
