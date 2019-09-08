@@ -192,20 +192,20 @@ end
 
 def big_shoe_rebounds
   current = 0 
-   
+  rebounds = 0 
   game_hash.each do |location, team|
     team.each do |attribute, data|
       if attribute == :players 
         data.each do |player|
           if player[:shoe] > current
             current = player[:shoe]
-            return player[:rebounds]
+            rebounds = player[:rebounds]
           end
         end
       end
     end
   end
-  
+  return rebounds
 end
 
 def most_points_scored
