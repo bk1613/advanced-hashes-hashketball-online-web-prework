@@ -146,7 +146,7 @@ def team_colors(name = "")
     team_data.each do |team_name, colors|
       if team_data[:team_name] == name
         binding.pry
-        return team_data[:colors]
+        
         
       end
     end
