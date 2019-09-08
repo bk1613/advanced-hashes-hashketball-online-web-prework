@@ -199,7 +199,7 @@ def big_shoe_rebounds
         data.each do |player|
           if player[:shoe] > current
             current = player[:shoe]
-            
+            rebounds = player[:rebounds]
           end
         end
       end
