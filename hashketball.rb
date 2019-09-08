@@ -172,13 +172,13 @@ end
 jersey_nums
 end
 
-def player_stats(player_name)
+def player_stats(name)
   status = {}
   game_hash.each do |location, team|
     team.each do |attribute, data|
       if attribute == :players 
         data.each do |player|
-          if player[:player_name] == player_name
+          if player[:player_name] == name
             status = player.delete_if do |k, v|
               k == :player_name
             end
