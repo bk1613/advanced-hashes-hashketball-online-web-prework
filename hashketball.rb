@@ -163,7 +163,7 @@ def player_numbers(name)
       if attribute == :players
         data.each do |data_key|
           if data_key[:player_name] == name
-            return data_key[:number]
+            jersey_numbers.push(data_key[:number])
           end
         end
       end
