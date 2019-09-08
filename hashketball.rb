@@ -243,13 +243,19 @@ def winning_team
         end
       end
     elsif location == :away
-      
+      team.each do |attribute, data|
+        if attribute == :players 
+          data.each do |player|
+            if player == :points
+              total_name += player[:points]
+              name = player[:player_name]
+            end
+          end
+        end
+      end
     end
   end
-  
-  game_hash.each do |location, team|
-    
-  end
+
 end
 
 def player_with_longest_name
