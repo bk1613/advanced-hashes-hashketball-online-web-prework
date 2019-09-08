@@ -286,7 +286,7 @@ def long_name_steals_a_ton?
     team.each do |attribute, data|
       if attribute == :players 
         data.each do |player_key|
-          if player[:player_name].length > current && player_key[:steals] > current_steal
+          if player_key[:player_name].length > current && player_key[:steals] > current_steal
             current = player_key[:player_name].length
             current_steal = player_key[:steals]
             return true
