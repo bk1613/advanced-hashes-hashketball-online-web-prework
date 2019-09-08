@@ -250,7 +250,8 @@ def winning_team
     end
   end
   
-  if total_name_home > 
+  if total_name_home > total_name_away
+    return 
 
 end
 
