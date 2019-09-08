@@ -261,15 +261,21 @@ def winning_team
 end
 
 def player_with_longest_name
+  current = 0 
+  long_name = " "
   game_hash.each do |location, team|
     team.each do |attribute, data|
       if attribute == :players 
         data.each do |player|
-          
+          if player[:shoe] > current
+            current = player[:shoe]
+            rebounds = player[:rebounds]
+          end
         end
       end
     end
   end
+  return rebounds
 end
 
 def long_name_steals_a_ton?
