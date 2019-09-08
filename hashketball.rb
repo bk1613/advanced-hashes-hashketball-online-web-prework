@@ -231,7 +231,7 @@ def winning_team
   team_name = ""
   
   game_hash.each do |location, team|
-    
+    if location == :home
   end
   
   game_hash.each do |location, team|
