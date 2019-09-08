@@ -250,7 +250,7 @@ def winning_team
     end
   end
   
-  if 
+  if total_name_home > 
 
 end
 
