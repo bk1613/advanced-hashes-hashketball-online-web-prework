@@ -267,7 +267,7 @@ def player_with_longest_name
     team.each do |attribute, data|
       if attribute == :players 
         data.each do |player|
-          if player[:shoe] > current
+          if player[:player_name].length > current
             current = player[:shoe]
             rebounds = player[:rebounds]
           end
@@ -275,7 +275,7 @@ def player_with_longest_name
       end
     end
   end
-  return rebounds
+  return long_name
 end
 
 def long_name_steals_a_ton?
