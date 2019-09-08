@@ -146,7 +146,7 @@ def team_colors
     team_data.each do |team_name, colors|
      if colors == name
         binding.pry
-        
+        colors
         
       #end
     end
