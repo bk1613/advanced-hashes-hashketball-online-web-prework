@@ -197,7 +197,9 @@ def big_shoe_rebounds
     team.each do |attribute, data|
       if attribute == :players 
         data.each do |player|
-          
+          if player[:shoe] > current
+            
+          end
         end
       end
     end
