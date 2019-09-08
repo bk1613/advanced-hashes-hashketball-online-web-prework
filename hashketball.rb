@@ -225,6 +225,7 @@ def most_points_scored
   end
   return name
 end
+
 def winning_team
   total_name_home = 0
   total_name_away = 0
