@@ -268,7 +268,7 @@ def player_with_longest_name
       if attribute == :players 
         data.each do |player|
           if player[:player_name].length > current
-            current = player[:shoe]
+            current = player[:player_name].length
             rebounds = player[:rebounds]
           end
         end
