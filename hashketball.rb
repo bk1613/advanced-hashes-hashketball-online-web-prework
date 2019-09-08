@@ -148,7 +148,7 @@ def team_colors
         binding.pry
         colors
         
-      #end
+      end
     end
   end
 end
