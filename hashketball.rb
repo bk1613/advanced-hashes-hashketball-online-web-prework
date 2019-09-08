@@ -195,8 +195,10 @@ def big_shoe_rebounds
   rebounds = 0 
   game_hash.each do |location, team|
     team.each do |attribute, data|
-      if player == :players 
+      if attribute == :players 
         data.each do |player|
+          
+        end
       end
     end
   end
