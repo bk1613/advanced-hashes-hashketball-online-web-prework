@@ -215,9 +215,8 @@ def most_points_scored
     team.each do |attribute, data|
       if attribute == :players 
         data.each do |player|
-          if player[:points] == name
+          if player[:points] > start
             return data_key[:points]
-            binding.pry
           end
         end
       end
