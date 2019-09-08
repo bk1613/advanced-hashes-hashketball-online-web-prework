@@ -209,7 +209,15 @@ def big_shoe_rebounds
 end
 
 def most_points_scored
-  
+  game_hash.each do |location, team|
+    team.each do |attribute, data|
+      if attribute == :players 
+        data.each do |player|
+          
+        end
+      end
+    end
+  end
 end
 
 def winning_team
