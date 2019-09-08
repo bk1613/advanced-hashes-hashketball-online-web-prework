@@ -156,14 +156,13 @@ def team_names
   end
 end
 
-def player_numbers(team_name)
+def player_numbers(name)
   jersey_nums = []
   game_hash.each do |location, team|
     if team_name == team[:team_name]
       team.each do |attribute, data|
         if attribute == :players
           data.each do |player|
-            # binding.pry
            jersey_nums.push(player[:number])
         end
       end
