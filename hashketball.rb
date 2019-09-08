@@ -157,7 +157,7 @@ def team_names
 end
 
 def player_numbers(name)
-  jersey_numbers = {}
+  jersey_numbers = []
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
       if attribute == :players
