@@ -162,7 +162,9 @@ def player_numbers(name = '')
     if team_data[:team_name] == name
       team_data.each do |attribute, data|
         if attribute = team_data[:players]
-          binding.pry
+          data.each do |data_key|
+            
+          end
         end
       end
     end
