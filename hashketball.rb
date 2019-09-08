@@ -194,11 +194,8 @@ def big_shoe_rebounds
   current = 0 
   rebounds = 0 
   game_hash.each do |location, team|
-    team[:players].each do |player|
-     if player[:shoe] > current
-       current = player[:shoe]
-          rebounds = player[:rebounds]
-       end
+    team.each do |player, data|
+      
     end
   end
   return rebounds
