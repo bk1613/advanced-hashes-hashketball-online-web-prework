@@ -169,7 +169,7 @@ def player_numbers(name)
       end
     end
   end
-  jersey_nums
+  puts jersey_nums
 end
 
 def player_stats(name)
