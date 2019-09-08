@@ -178,7 +178,7 @@ def player_stats(name)
     team.each do |attribute, data|
       if attribute == :players 
         data.each do |player_key|
-          if player[:player_name] == name
+          if player_key[:player_name] == name
             status = player_key.delete_if do |key, value|
               key == :player_name
             end
@@ -196,10 +196,10 @@ def big_shoe_rebounds
   game_hash.each do |location, team|
     team.each do |attribute, data|
       if attribute == :players 
-        data.each do |player|
-          if player[:shoe] > current
-            current = player[:shoe]
-            rebounds = player[:rebounds]
+        data.each do |player_key|
+          if player_key[:shoe] > current
+            current = player_key[:shoe]
+            rebounds = player_key[:rebounds]
           end
         end
       end
@@ -214,10 +214,10 @@ def most_points_scored
   game_hash.each do |location, team|
     team.each do |attribute, data|
       if attribute == :players 
-        data.each do |player|
-          if player[:points] > max
-            max = player[:points]
-            name = player[:player_name]
+        data.each do |player_key|
+          if player_key[:points] > max
+            max = player_key[:points]
+            name = player_key[:player_name]
           end
         end
       end
@@ -235,16 +235,16 @@ def winning_team
     if location == :home
       team.each do |attribute, data|
         if attribute == :players 
-          data.each do |player|
-            total_name_home += player[:points]
+          data.each do |player_key|
+            total_name_home += player_key[:points]
           end
         end
       end
     elsif location == :away
       team.each do |attribute, data|
         if attribute == :players 
-          data.each do |player|
-            total_name_away += player[:points]
+          data.each do |player_key|
+            total_name_away += player_key[:points]
           end
         end
       end
@@ -266,10 +266,10 @@ def player_with_longest_name
   game_hash.each do |location, team|
     team.each do |attribute, data|
       if attribute == :players 
-        data.each do |player|
-          if player[:player_name].length > current
-            current = player[:player_name].length
-            long_name = player[:player_name]
+        data.each do |player_key|
+          if player_key[:player_name].length > current
+            current = player_key[:player_name].length
+            long_name = player_key[:player_name]
           end
         end
       end
@@ -285,10 +285,10 @@ def long_name_steals_a_ton?
   game_hash.each do |location, team|
     team.each do |attribute, data|
       if attribute == :players 
-        data.each do |player|
-          if player[:player_name].length > current && player[:steals] > current_steal
-            current = player[:player_name].length
-            current_steal = player[:steals]
+        data.each do |player_key|
+          if player[:player_name].length > current && player_key[:steals] > current_steal
+            current = player_key[:player_name].length
+            current_steal = player_key[:steals]
             return true
           end
         end
