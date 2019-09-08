@@ -233,7 +233,7 @@ def winning_team
   game_hash.each do |location, team|
     if location == :home
       
-    elsif 
+    elsif location == :away
       
     end
   end
