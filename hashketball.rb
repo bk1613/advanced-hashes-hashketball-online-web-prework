@@ -164,7 +164,7 @@ def player_numbers(name)
         if attribute == :players
           data.each do |player|
             # binding.pry
-           jersey_numbers player[:number]
+           jersey_numbers.push() player[:number]
           end
         end
       end
