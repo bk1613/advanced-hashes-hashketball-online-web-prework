@@ -162,8 +162,8 @@ def player_numbers(name)
     if team[:team_name] == name
       team.each do |attribute, data|
         if attribute == :players
-          data.each do |player|
-           jersey_nums.push(player[:number])
+          data.each do |player_key|
+           jersey_nums.push(player_key[:number])
         end
       end
     end
@@ -177,9 +177,9 @@ def player_stats(name)
   game_hash.each do |location, team|
     team.each do |attribute, data|
       if attribute == :players 
-        data.each do |player|
+        data.each do |player_key|
           if player[:player_name] == name
-            status = player.delete_if do |key, value|
+            status = player_key.delete_if do |key, value|
               key == :player_name
             end
           end
