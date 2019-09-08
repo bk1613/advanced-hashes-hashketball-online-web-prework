@@ -269,7 +269,7 @@ def player_with_longest_name
         data.each do |player|
           if player[:player_name].length > current
             current = player[:player_name].length
-            rebounds = player[:rebounds]
+            rebounds = player[:player_name]
           end
         end
       end
