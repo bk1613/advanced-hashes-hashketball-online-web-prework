@@ -217,14 +217,13 @@ def most_points_scored
         data.each do |player|
           if player[:points] > max
             max = player[:points]
-            name = player[:points]
+            name = player[:player_name]
           end
         end
       end
     end
   end
-  return max
-end
+  return name
 
 def winning_team
   
