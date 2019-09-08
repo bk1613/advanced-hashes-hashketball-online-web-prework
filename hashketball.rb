@@ -191,8 +191,8 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
-  current = nil 
-  rebounds = nil 
+  current = 0 
+  rebounds = 0 
   game_hash.each do |location, team|
     team[:players].each do |player|
      if current == nil || player[:shoe] > current
